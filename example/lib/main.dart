@@ -1,6 +1,5 @@
-import 'package:fantd/fantd.dart';
+import 'package:fantd/fantd.dart' as fantd;
 import 'package:flutter/material.dart';
-import 'package:fantd/style/color.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      _counter = Calculator().addOne(_counter);
+      _counter++;
     });
   }
 
@@ -95,6 +94,18 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            const fantd.Icon(
+              name: 'plus',
+              theme: fantd.IconTheme.outlined,
+            ),
+            const fantd.Icon(
+              name: 'minus-circle',
+              theme: fantd.IconTheme.twotone,
+            ),
+            const fantd.Icon(
+              name: 'question-circle',
+              theme: fantd.IconTheme.filled,
+            )
           ],
         ),
       ),

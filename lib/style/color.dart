@@ -1,9 +1,5 @@
 import 'dart:ui';
 
-abstract class ColorValue {
-  abstract final Color value;
-}
-
 class ColorPalette {
   final Iterable<Color> _colors;
   const ColorPalette({required Iterable<Color> colors})
